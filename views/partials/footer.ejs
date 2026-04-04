@@ -1,0 +1,52 @@
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Tara Oltmans</h3>
+        <p>Travelmation Travel Agent</p>
+        <p>Making your dream vacations a reality.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">Why a Travel Advisor?</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/terms">Terms & Privacy</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Get in Touch</h3>
+        <p>Email: <a href="mailto:tara@example.com">taraoltmans@travelmation.net</a></p>
+        <p>Phone: (717) 580-9283</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <%= new Date().getFullYear() %> Tara Oltmans | Travelmation Travel Agent. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+
+    // Add solid background to navbar once scrolled past hero
+    (function() {
+      var navbar = document.querySelector('.navbar');
+      var hero = document.querySelector('.hero');
+      if (!navbar) return;
+      if (!hero) { navbar.classList.add('navbar--solid'); return; }
+      function onScroll() {
+        if (window.scrollY > hero.offsetHeight - 64) {
+          navbar.classList.add('navbar--solid');
+        } else {
+          navbar.classList.remove('navbar--solid');
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
+  <script src="/js/parallax.js"></script>
+</body>
+</html>
