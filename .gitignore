@@ -1,5 +1,8 @@
 node_modules/
 .env
-public/images/
+public/images/*
+!public/images/arizona-balloon-sunset-couple.jpeg
+!public/images/santorini-view.jpg
+!public/images/turkey-view.jpg
 public/videos/
 .claude/
